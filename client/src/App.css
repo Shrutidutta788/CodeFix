@@ -1,0 +1,1346 @@
+/* =========================================================
+   CODEFIX - APP.CSS
+   ========================================================= */
+
+/* =========================
+   GLOBAL
+   ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: #f4f7fb;
+  color: #111827;
+}
+
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  outline: none;
+}
+
+
+/* =========================
+   MAIN APP
+   ========================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 14px 30px 14px;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    radial-gradient(
+      circle at 8% 8%,
+      rgba(79, 70, 229, 0.12),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 92% 8%,
+      rgba(124, 58, 237, 0.1),
+      transparent 24%
+    ),
+    #f4f7fb;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 16px;
+
+  position: relative;
+  z-index: 10;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   BRAND
+   ========================= */
+
+.brand {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.brand h1 {
+  display: block;
+
+  margin: 0;
+
+  font-size: 58px;
+  font-weight: 900;
+  line-height: 0.95;
+
+  letter-spacing: -2.5px;
+
+  background: linear-gradient(
+    135deg,
+    #111827 0%,
+    #4f46e5 50%,
+    #7c3aed 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.brand p {
+  margin-top: 8px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+
+/* =========================
+   HEADER BADGE
+   ========================= */
+
+.header-badge {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 10px 16px;
+
+  margin-top: 2px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e7ef;
+
+  border-radius: 30px;
+
+  color: #4b5563;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px rgba(34, 197, 94, 0.12);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.main-container {
+  width: 100%;
+
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 22px;
+
+  min-height: 0;
+}
+
+
+/* =========================================================
+   LEFT SIDE - EDITOR
+   ========================================================= */
+
+.editor-section {
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid #e2e6ee;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================
+   SECTION HEADING
+   ========================= */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.section-heading h2,
+.card-title h2 {
+  color: #111827;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.section-heading p,
+.card-title p {
+  margin-top: 5px;
+
+  color: #7b8495;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   CLEAR BUTTON
+   ========================================================= */
+
+.clear-btn {
+  padding: 8px 14px;
+
+  border: 1px solid #dfe4ec;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #667085;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.clear-btn:hover {
+  background: #f3f4f6;
+
+  color: #111827;
+
+  border-color: #d1d5db;
+
+  transform: translateY(-1px);
+}
+
+.clear-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
+
+.language-row {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin: 15px 0 10px;
+}
+
+.language-row label {
+  color: #4b5563;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.language-row select {
+  width: 130px;
+
+  padding: 8px 10px;
+
+  border: 1px solid #dfe3eb;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  outline: none;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   CODE EDITOR
+   ========================================================= */
+
+.code-editor {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #101827;
+
+  border: 1px solid #202b3b;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.15);
+}
+
+
+/* =========================
+   EDITOR TOP BAR
+   ========================= */
+
+.editor-top {
+  height: 38px;
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 13px;
+
+  background: #192335;
+
+  border-bottom: 1px solid #293447;
+}
+
+.window-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.window-buttons span {
+  width: 9px;
+  height: 9px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: #64748b;
+}
+
+.window-buttons span:nth-child(1) {
+  background: #ef4444;
+}
+
+.window-buttons span:nth-child(2) {
+  background: #f59e0b;
+}
+
+.window-buttons span:nth-child(3) {
+  background: #22c55e;
+}
+
+.file-name {
+  color: #a0aabd;
+
+  font-family:
+    Consolas,
+    "Courier New",
+    monospace;
+
+  font-size: 11px;
+}
+
+.language-label {
+  color: #7dd3fc;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   CODE TEXTAREA
+   ========================= */
+
+.code-editor textarea {
+  flex: 1;
+
+  width: 100%;
+  min-height: 300px;
+
+  resize: none;
+
+  padding: 18px;
+
+  border: none;
+
+  outline: none;
+
+  background: #101827;
+
+  color: #e5e7eb;
+
+  font-family:
+    "Cascadia Code",
+    Consolas,
+    "Courier New",
+    monospace;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  tab-size: 4;
+}
+
+.code-editor textarea::placeholder {
+  color: #64748b;
+}
+
+.code-editor textarea:focus {
+  box-shadow:
+    inset 0 0 0 1px rgba(99, 102, 241, 0.35);
+}
+
+
+/* =========================================================
+   ANALYZE BUTTON
+   ========================================================= */
+
+.analyze-btn {
+  width: 100%;
+
+  margin-top: 13px;
+
+  padding: 13px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #7c3aed
+    );
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.analyze-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(79, 70, 229, 0.3);
+}
+
+.analyze-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+.arrow {
+  font-size: 18px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   SPINNER
+   ========================================================= */
+
+.spinner {
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.result-section {
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   RESULT CARDS
+   ========================================================= */
+
+.result-card,
+.fixed-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid #e2e6ee;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.07);
+}
+
+.result-card {
+  flex: 1;
+
+  min-height: 0;
+}
+
+
+/* =========================
+   CARD TITLE
+   ========================= */
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   RESULT STATUS
+   ========================================================= */
+
+.result-status,
+.fixed-label {
+  flex-shrink: 0;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+}
+
+.result-status.success {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.result-status.error {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+.result-status.fixed,
+.fixed-label {
+  background: #ede9fe;
+
+  color: #6d28d9;
+}
+
+
+/* =========================================================
+   ANALYSIS CONTENT
+   ========================================================= */
+
+.analysis-content {
+  height: calc(100% - 52px);
+
+  margin-top: 15px;
+
+  overflow-y: auto;
+
+  padding-right: 4px;
+}
+
+.analysis-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.analysis-content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+
+  border-radius: 10px;
+}
+
+.analysis-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-state {
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  text-align: center;
+}
+
+.empty-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 14px;
+
+  background: #ede9fe;
+
+  color: #6d5ce7;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.empty-state h3 {
+  color: #374151;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.empty-state p {
+  margin-top: 6px;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.empty-state strong {
+  color: #6366f1;
+}
+
+
+/* =========================================================
+   ANALYSIS DETAILS
+   ========================================================= */
+
+.analysis-details {
+  width: 100%;
+}
+
+
+/* =========================================================
+   MESSAGE BOX
+   ========================================================= */
+
+.message-box {
+  padding: 13px;
+
+  border-radius: 11px;
+
+  background: #f8f9fc;
+
+  border: 1px solid #e6e9f0;
+}
+
+.message-label {
+  color: #8b95a7;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+.message-box p {
+  margin-top: 6px;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ERROR LIST
+   ========================================================= */
+
+.error-list {
+  margin-top: 13px;
+}
+
+.error-list h3 {
+  margin-bottom: 8px;
+
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.error-item {
+  display: flex;
+
+  gap: 10px;
+
+  padding: 11px;
+
+  margin-bottom: 7px;
+
+  border-radius: 10px;
+
+  background: #fff7f7;
+
+  border: 1px solid #f3d5d5;
+}
+
+.error-number {
+  width: 23px;
+  height: 23px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.error-info {
+  min-width: 0;
+}
+
+.error-item strong {
+  color: #991b1b;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.error-item p {
+  margin-top: 3px;
+
+  color: #6b7280;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+.error-item small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   SUGGESTION
+   ========================================================= */
+
+.suggestion-box {
+  display: flex;
+
+  gap: 9px;
+
+  margin-top: 10px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #f5f3ff;
+
+  border: 1px solid #e4ddff;
+}
+
+.suggestion-icon {
+  flex-shrink: 0;
+
+  font-size: 16px;
+}
+
+.suggestion-box strong {
+  color: #5b21b6;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.suggestion-box p {
+  margin-top: 3px;
+
+  color: #6b7280;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CORRECTED CODE
+   ========================================================= */
+
+.fixed-editor {
+  width: 100%;
+
+  height: 155px;
+
+  margin-top: 13px;
+
+  overflow: auto;
+
+  border-radius: 11px;
+
+  background: #101827;
+
+  border: 1px solid #202b3b;
+}
+
+.fixed-editor::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.fixed-editor::-webkit-scrollbar-thumb {
+  background: #475569;
+
+  border-radius: 10px;
+}
+
+.fixed-editor::-webkit-scrollbar-track {
+  background: #101827;
+}
+
+
+/* =========================================================
+   CORRECTED CODE HEADER
+   ========================================================= */
+
+.fixed-editor-header {
+  height: 40px;
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 12px;
+
+  background: #192335;
+
+  border-bottom: 1px solid #293447;
+
+  color: #a0aabd;
+
+  font-family:
+    Consolas,
+    "Courier New",
+    monospace;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   COPY BUTTON
+   ========================================================= */
+
+.copy-btn {
+  width: 32px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #46546a;
+
+  border-radius: 7px;
+
+  background: #253147;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: #3b4a63;
+
+  border-color: #64748b;
+
+  transform: translateY(-1px);
+}
+
+.copy-btn:active {
+  transform: scale(0.94);
+}
+
+.copy-btn.copied {
+  background: #15803d;
+
+  border-color: #15803d;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CORRECTED CODE TEXT
+   ========================================================= */
+
+.fixed-editor pre {
+  margin: 0;
+
+  padding: 15px;
+
+  color: #dbeafe;
+
+  font-family:
+    "Cascadia Code",
+    Consolas,
+    "Courier New",
+    monospace;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+}
+
+.fixed-editor code {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   EMPTY FIXED CODE
+   ========================================================= */
+
+.fixed-empty {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  text-align: center;
+
+  color: #64748b;
+}
+
+.fixed-empty-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 7px;
+
+  border-radius: 50%;
+
+  background: #1f2937;
+
+  color: #9ca3af;
+
+  font-size: 15px;
+}
+
+.fixed-empty p {
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   APPLY FIX BUTTON
+   ========================================================= */
+
+.apply-btn {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 11px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.apply-btn:hover:not(:disabled) {
+  background: #293548;
+
+  transform: translateY(-1px);
+}
+
+.apply-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.apply-btn:disabled {
+  background: #d1d5db;
+
+  color: #f9fafb;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 10px;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+}
+
+footer span:first-child {
+  color: #6366f1;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .app {
+    padding: 18px 20px 14px;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-section {
+    min-height: 450px;
+  }
+
+  .result-section {
+    min-height: 500px;
+  }
+
+  .result-card {
+    min-height: 300px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 14px 12px;
+  }
+
+  .header {
+    margin-bottom: 14px;
+  }
+
+  .brand h1 {
+    font-size: 44px;
+
+    letter-spacing: -2px;
+  }
+
+  .brand p {
+    font-size: 12px;
+  }
+
+  .header-badge {
+    display: none;
+  }
+
+  .editor-section,
+  .result-card,
+  .fixed-card {
+    padding: 15px;
+
+    border-radius: 14px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .card-title {
+    align-items: flex-start;
+  }
+
+  .language-row {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 7px;
+  }
+
+  .language-row select {
+    width: 100%;
+  }
+
+  .code-editor textarea {
+    min-height: 280px;
+
+    font-size: 13px;
+  }
+
+  .fixed-editor {
+    height: 180px;
+  }
+
+  .fixed-editor pre {
+    font-size: 11px;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .app {
+    padding: 12px 9px;
+  }
+
+  .brand h1 {
+    font-size: 38px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .brand p {
+    font-size: 11px;
+  }
+
+  .editor-section,
+  .result-card,
+  .fixed-card {
+    padding: 12px;
+  }
+
+  .section-heading h2,
+  .card-title h2 {
+    font-size: 17px;
+  }
+
+  .analyze-btn {
+    padding: 12px;
+  }
+
+  .fixed-editor {
+    height: 170px;
+  }
+}
